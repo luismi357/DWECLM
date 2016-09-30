@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ejercicio 15</title>
-  </head>
-  <body>
-    <script type="text/javascript">
-      var diasSemana=["Lunes","Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
-      for(i=0;i<=diasSemana.length;i++){
-        document.write(diasSemana(i)+"<br>");
-      }
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 15</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+  //Ejercicio 15 a)
+
+    var diasSemana=["Lunes","Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+    function dias(){
+    for(var i=0;i<diasSemana.length;i++){
+       document.write("<p>"+diasSemana[i]+"</p><br>");
+     }
+   }
+  //   semana();
+
+  //Ejercicio 15 b)
+  function numeroSemana(){
+    var num=prompt("Dime el numero dia de la semana");
+      document.write("El dia de la semana es "+diasSemana[num]);
+    }
+
+
+
+  //Ejercicio 15 c)
+  function diaCorrecto(){
+    var num=prompt("Dime el numero dia de la semana correcto");
+    if(isNaN(num)){
+        document.write("Ese no es numero de dias");
+    }else if(isFinite(num)){
+        document.write("El dia de la semana es "+diasSemana[num]);
+    }
+  }
+ dias();
+ numeroSemana();
+ diaCorrecto();
+  </script>
+</body>
 </html>
