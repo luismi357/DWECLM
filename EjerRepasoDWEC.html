@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alert</title>
+    <script type="text/javascript">
+    var ahora=new Date();
+    var nacimiento=new Date(1994,9,29);
+    var calculo=ahora.getTime()-nacimiento.getTime();
+    var nObjeto=new Date(calculo);
+    // document.write(calculo);
+    var anyo=calculo.setYear();
+    document.write(anyo);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 var crono=new Object();
 var ventana;
 var n;
+
 crono.empezar=function(){
 crono.inicio = new Date().getTime();
 if(ventana==undefined){
@@ -13,6 +14,7 @@ crono.contar();
 
 //Ejecuta cada segundo la diferencia entre la fecha actual
 crono.contar=function(){
+//Te dice la fecha actual
 var time = new Date().getTime();
 diff = new Date(time-crono.inicio);
 if(n==undefined){
@@ -26,6 +28,7 @@ if(n==undefined){
 }
 ventana.document.body.innerHTML=
 crono.formatear(h) + ":" + crono.formatear(m) + ":" + crono.formatear(s);
+//Cuenta cada milisegundos que le pongas
 crono.timer = setTimeout(crono.contar, 1000);
 }
 
@@ -36,6 +39,7 @@ return i;
 }
 
 crono.parar=function(){
+
   clearTimeout(crono.timer);
   n=ventana.document.body.innerHTML;
   n=n.split(":");
