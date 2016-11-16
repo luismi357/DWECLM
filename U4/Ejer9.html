@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Crea elementos del DOM</title>
+    <script type="text/javascript">
+      function creaDOM(){
+        var titulo=document.createElement("h1");
+        var imagen=document.createElement("img");
+        imagen.setAttribute("src","imagen.png");
+        var texto=document.createTextNode("Esto es un h1");
+        titulo.appendChild(texto);
+        document.body.appendChild(titulo);
+        document.body.appendChild(imagen);
+      }
+    </script>
+</head>
+<body onload="creaDOM()">
+</body>
+</html>
