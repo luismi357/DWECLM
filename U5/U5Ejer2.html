@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="color" onclick="cambioColor()">Esto es un p</p>
+    <div>Esto es un div</div>
+    <h1>Esto es un h1</h1>
+    <h2  onmouseup="titulo2.innerText='Cambio H2'">Esto es un h2</h2>
+    <h3 id="">Esto es un h3</h3>
+
+<script type="text/javascript">
+ondblclick=function cambioLetra(){
+    document.getElementsByTagName('div')[0].style.textTransform="uppercase";
+}
+  function cambioColor(){
+    document.getElementById('color').style.color="red";
+  }
+
+  function bajarLetra(e){
+    e.target.style.fontSize="15px";
+  }
+  document.getElementsByTagName('h1')[0].onmousedown=bajarLetra;
+
+  var titulo2=document.getElementsByTagName('h2')[0];
+
+  // var fuente;
+  // function cambiaFuente(){
+  //   fuente=document.getElementById('letra').style.fontFamily;
+  //   document.getElementById('fuente').style.fontFamily="arial";
+  // }
+
+</script>
+  </body>
+</html>
