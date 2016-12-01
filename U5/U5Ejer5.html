@@ -15,15 +15,19 @@
       onwheel = function (e) {
 					if (e.wheelDelta > 0) {
 						if (e.target.nodeName == "H1") {
-							e.target.style.fontSize = (fuente*2) + "px";
+              fuente*=2;
+							e.target.style.fontSize = fuente + "px";
 						} else if (e.target.nodeName == "IMG") {
-							e.target.style.width = (anchoImg*2) + "px";
+              anchoImg*=2;
+							e.target.style.width = anchoImg + "px";
 						}
 					} else {
 						if (e.target.nodeName == "H1") {
-							e.target.style.fontSize = (fuente*2) + "px";
+              fuente/=2;
+							e.target.style.fontSize = fuente + "px";
 						} else if (e.target.nodeName == "IMG") {
-							e.target.style.width = (anchoImg*2) + "px";
+              anchoImg/=2;
+							e.target.style.width = anchoImg + "px";
 						}
 					}
 				}
