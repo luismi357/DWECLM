@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div{
+        font-size: 30px;
+        text-align: center;
+        padding:20px;
+        background-color: grey;
+        margin-left: 40%;
+        margin-right: 40%;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contenido"></div>
+    <script>
+    onkeydown=function(event){
+      var x = event.keyCode;               // Get the Unicode value
+      var y = String.fromCharCode(x);      // Convert the value into a character
+      document.getElementById("contenido").innerHTML =  y;
+      // contenido.innerText = event.keyCode;
+    }
+    </script>
+  </body>
+</html>
