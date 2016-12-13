@@ -14,16 +14,18 @@
         border-radius: 20px;
       }
     </style>
+    <script>
+    onload=function(){
+    onkeypress=function(e){
+      var x = e.charCode;
+      var y = String.fromCharCode(e.charCode);
+      document.getElementById("contenido").innerHTML =  y;
+      // contenido.innerText = event.keyCode;
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="contenido"></div>
-    <script>
-    onkeydown=function(event){
-      var x = event.keyCode;               // Get the Unicode value
-      var y = String.fromCharCode(x);      // Convert the value into a character
-      document.getElementById("contenido").innerHTML =  y;
-      // contenido.innerText = event.keyCode;
-    }
-    </script>
   </body>
 </html>
