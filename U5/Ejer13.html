@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejer13U5</title>
+    <style media="screen">
+      div label{
+        width: 100px;
+        float:left;
+      }
+      input[type=text],input[type=password]{
+        padding-left: 5px;
+        margin-top: 10px;
+      }
+      fieldset{
+        width: 250px;
+      }
+    </style>
+    <script type="text/javascript">
+      onload = function(){
+        user.onfocus =  ponFoco;
+        pass.onfocus = ponFoco;
+        function ponFoco(e){
+          //Para no tener el borde de color por defecto en la caja
+          e.target.style.outline = "red solid 1px";
+        }
+        //cuando ya no tengas el foco vuelve al estado anterior
+        user.onblur=quitaFoco;
+        pass.onblur=quitaFoco;
+        function quitaFoco(e){
+          e.target.style.outline="none";
+          //Lo de abajo trim es para que los caracteres en blanco no los coga
+          //Y tambien lo de debajo es para que
+          if(e.target.value== null || e.target.value.trim().length == 0){
+            resultado.innerHTML = "El campo "+ e.target.name +" esta vacio";
+            //no te deja cambiar a otro campo hasta que no pongas algo
+            e.target.focus();
+          }else{
+              resultado.innerHTML = "";
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Login</legend>
+        <div>
+          <label for="user">Usuario:</label>
+          <input type="text" name="user" id="user">
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input type="password" name="pass" id="pass">
+        </div>
+        <p id="resultado"></p>
+        <input type="submit" name="enviar" value="enviar">
+      </fieldset>
+    </form>
+  </body>
+</html>
