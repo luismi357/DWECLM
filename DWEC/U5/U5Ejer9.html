@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Unidad 9 ejer 9</title>
+    <style media="screen">
+      div{
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+        background-color: yellow;
+        margin: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pulsa una flecha</h1>
+    <div id="cont"></div>
+    <script type="text/javascript">
+    var margenLado=200;
+    var margenSubeBaja = 200;
+    onkeyup = function (e){
+      var contenedor=document.getElementById('cont');
+      var tecla= e.keyCode;
+      console.log(tecla);
+      if(tecla==37){
+        margenLado -= 20;
+        contenedor.style.marginLeft=(margenLado)+"px";
+      }else if (tecla==38) {
+        margenSubeBaja -= 20;
+        contenedor.style.marginTop=(margenSubeBaja)+"px";
+      }else if(tecla==39){
+        margenLado += 20;
+        contenedor.style.marginLeft=(margenLado)+"px";
+      }else if(tecla==40){
+        margenSubeBaja +=20;
+        contenedor.style.marginTop=(margenSubeBaja)+"px";
+      }
+    }
+    </script>
+
+  </body>
+</html>
